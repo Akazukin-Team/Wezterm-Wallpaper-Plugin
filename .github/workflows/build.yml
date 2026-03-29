@@ -33,7 +33,7 @@ jobs:
         run: sudo apt install lua${{ env.LUA_VERSION }}
 
       - name: Build
-        run: luac -o src/wallpaper.lua out/wallpaper.lua
+        run: luac -o out/wallpaper.lua src/wallpaper.lua
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v7
