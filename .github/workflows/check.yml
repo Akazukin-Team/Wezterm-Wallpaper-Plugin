@@ -34,4 +34,6 @@ jobs:
         run: sudo apt install lua${{ env.LUA_VERSION }}
 
       - name: Build
-        run: luac -o out/wallpaper.lua src/wallpaper.lua
+        run: |
+          mkdir -p out
+          luac -o out/wallpaper.lua src/wallpaper.lua
