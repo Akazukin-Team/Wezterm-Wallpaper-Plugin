@@ -1,6 +1,6 @@
-# <PLACEHOLDER_NAME>
+# Wezterm Wallpaper Plugin
 
-<PLACEHOLDER_DESCRIPTION>
+A highly customizable lua mmodule for Wezterm to dynamiclly manage and update window wallpaper.
 
 ---
 
@@ -20,7 +20,9 @@
 
 ## Features
 
-- <PLACEHOLDER_FEATURES>
+- Dynamic Updates: Change wallpapers on the fly via Lua API.
+- Smart Context: Automatically applies backgrounds to active windows.
+- Easy Setup: Seamless integration with your `wezterm.lua` configuration.
 
 ---
 
@@ -30,11 +32,33 @@
 
 Make sure you have the following installed:
 
-- <PLACEHOLDER_BUILDTOOL>
+- **Wezterm** nightly or later
 
 ---
 
 ### Installation
+
+1. Clone the repository:
+
+   ```shell
+   git clone https://github.com/Akazukin-Team/Wezterm-Wallpaper-Plugin.git
+   cd Wezterm-Wallpaper-Plugin
+   ```
+
+2. Write wezterm.lua
+
+   ```lua
+   local wallpaper = require 'path_to_repo/src/wallpaper'
+   
+   local wallpaper_cfg = wallpaper.create_config()
+   wallpaper_cfg.paths = {'D:\\Wallpapers'}
+   wallpaper_cfg.interval = 30
+   wallpaper_cfg.max_depth = 5
+   wallpaper_cfg.opacity = 0.9
+   wallpaper_cfg.brightness = 0.15
+   
+   wallpaper.setup(wallpaper_config)
+   ```
 
 ---
 
@@ -42,21 +66,6 @@ Make sure you have the following installed:
 
 Please read the [Contribution Guide](./.github/CONTRIBUTING.md) carefully and follow the coding conventions and
 guidelines when making your changes.
-
----
-
-## Build Instructions
-
-To build the project from source, follow these steps:
-
-1. Clone the repository:
-
-   ```shell
-   git clone https://github.com/Akazukin-Team/<PLACEHOLDER_REPO>.git
-   cd <PLACEHOLDER_REPO>
-   ```
-
-<PLACEHOLDER_BUILD>
 
 ---
 

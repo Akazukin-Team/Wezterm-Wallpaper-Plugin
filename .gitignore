@@ -1,0 +1,5 @@
+# Exclude Editor directories and files
+.vscode/
+
+# Exclude output directories
+out/
