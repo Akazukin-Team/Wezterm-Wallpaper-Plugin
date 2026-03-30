@@ -38,17 +38,14 @@ Make sure you have the following installed:
 
 ### Installation
 
-1. Clone the repository:
+1. Download from the relases page of the repository.
 
-   ```shell
-   git clone https://github.com/Akazukin-Team/Wezterm-Wallpaper-Plugin.git
-   cd Wezterm-Wallpaper-Plugin
-   ```
+2. Move to `~\.config\wezterm\`
 
-2. Write wezterm.lua
+3. Write wezterm.lua
 
    ```lua
-   local wallpaper = require 'path_to_repo/src/wallpaper'
+   local wallpaper = require 'wallpaper'
    
    local wallpaper_cfg = wallpaper.create_config()
    wallpaper_cfg.paths = {'D:\\Wallpapers'}
@@ -66,6 +63,29 @@ Make sure you have the following installed:
 
 Please read the [Contribution Guide](./.github/CONTRIBUTING.md) carefully and follow the coding conventions and
 guidelines when making your changes.
+
+---
+
+## Build Instructions
+
+To build the project from source, follow these steps:
+
+1. Clone the repository:
+
+   ```shell
+   git clone https://github.com/Akazukin-Team/Wezterm-Wallpaper-Plugin.git
+   cd Wezterm-Wallpaper-Plugin
+   ```
+
+2. Build the project with Gradle:
+
+   ```shell
+   luac -o out/wallpaper.lua src/wallpaper.lua
+   ```
+
+   The compiled Lua file will be located in the `out/` directory.
+
+---
 
 ---
 
